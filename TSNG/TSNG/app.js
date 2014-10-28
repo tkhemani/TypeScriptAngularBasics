@@ -1,27 +1,15 @@
-﻿var Greeter = (function () {
-    function Greeter(element) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
-    }
-    Greeter.prototype.start = function () {
-        var _this = this;
-        this.timerToken = setInterval(function () {
-            return _this.span.innerHTML = new Date().toUTCString();
-        }, 500);
-    };
+/// <reference path="scripts/typings/angularjs/angular-resource.d.ts" />
+/// <reference path="scripts/typings/angularjs/angular.d.ts" />
 
-    Greeter.prototype.stop = function () {
-        clearTimeout(this.timerToken);
-    };
-    return Greeter;
-})();
+// Create the module and define its dependencies.
+var app = angular.module('app', [
+    'ngResource',
+    'ngAnimate',
+    'ngRoute'
+]);
 
-window.onload = function () {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
-    greeter.start();
-};
+// Execute bootstrapping code and any dependencies.
+app.run([
+    '$q', '$rootScope', function ($q, $rootScope) {
+    }]);
 //# sourceMappingURL=app.js.map

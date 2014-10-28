@@ -1,7 +1,5 @@
-// Install the angularjs.TypeScript.DefinitelyTyped NuGet package to resolve the reference paths,
-// then adjust the path value to be relative to this file
-/// <reference path='/Scripts/typings/angularjs/angular.d.ts'/>
-/// <reference path='/Scripts/typings/angularjs/angular-resource.d.ts'/>
+/// <reference path="scripts/typings/angularjs/angular-resource.d.ts" />
+/// <reference path="scripts/typings/angularjs/angular.d.ts" />
 
 interface Iapp extends ng.IModule { }
 

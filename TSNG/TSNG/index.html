@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <title>TypeScript HTML App</title>
     <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="Scripts/angular.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
+<body data-ng-controller="HomeController">
     <h1>TypeScript HTML App</h1>
 
-    <div id="content"></div>
+    <div id="content">{{greeting}}</div>
 </body>
 </html>
